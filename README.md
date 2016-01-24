@@ -1,6 +1,6 @@
-# graphql-go-handler
+# graphql-go-handler [![Build Status](https://travis-ci.org/graphql-go/handler.svg)](https://travis-ci.org/graphql-go/handler) [![GoDoc](https://godoc.org/graphql-go/handler?status.svg)](https://godoc.org/github.com/graphql-go/handler) [![Coverage Status](https://coveralls.io/repos/graphql-go/handler/badge.svg?branch=master&service=github)](https://coveralls.io/github/graphql-go/handler?branch=master) [![Join the chat at https://gitter.im/graphql-go/graphql](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/graphql-go/graphql?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Golang HTTP.Handler for [graphl-go](https://github.com/chris-ramon/graphql)
+Golang HTTP.Handler for [graphl-go](https://github.com/graphql-go/graphql)
 
 ### Notes:
 This is based on alpha version of `graphql-go` and `graphql-relay-go`. 
@@ -13,7 +13,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/sogko/graphql-go-handler"
+	"github.com/graphql-go/handler"
 )
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 	// define GraphQL schema using relay library helpers
 	schema := graphql.NewSchema(...)
   
-	h := gqlhandler.New(&gqlhandler.Config{
+	h := handler.New(&handler.Config{
 		Schema: schema,
 		Pretty: true,
 	})
@@ -68,14 +68,11 @@ depending on the provided `Content-Type` header.
 
 
 ### Examples
-- [golang-graphql-playground](https://github.com/sogko/golang-graphql-playground)
+- [golang-graphql-playground](https://github.com/graphql-go/playground)
 - [golang-relay-starter-kit](https://github.com/sogko/golang-relay-starter-kit)
 - [todomvc-relay-go](https://github.com/sogko/todomvc-relay-go)
 
 ### Test
 ```bash
-$ go get github.com/sogko/graphql-go-handler
+$ go get github.com/graphql-go/handler
 $ go build && go test ./...
-```
-### Changelog
-For recent changes, see [Changelog](./CHANGELOG.md)
